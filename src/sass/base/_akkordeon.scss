@@ -1,0 +1,101 @@
+.accordeon {
+	margin: 25px 0;
+
+	&-item {
+		@include pix-to-rem(12px);
+		line-height: 1.5;
+		margin-bottom: 10px;
+		border: 2px solid $color-akcent;
+		border-radius: 10px;
+		overflow: hidden;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&-header {
+			margin: auto;
+			@include pix-to-rem(22px);
+			cursor: pointer;
+			padding: 15px 10px;
+			color: $color-akcent;
+			font-weight: bold;
+			background-color: #f1f1f1;
+		}
+
+		&-descr {
+		}
+	}
+}
+
+.usluga {
+	&-box {
+		border: 2px solid $color-akcent;
+		border-radius: 10px;
+		margin: 25px 0;
+		overflow: hidden;
+	}
+
+	&-item {
+		border-bottom: 2px solid #f1f1f1;
+		padding: 10px;
+		box-sizing: border-box;
+		display: block;
+		overflow: hidden;
+		@include pix-to-rem(18px);
+		&:nth-child(2n) {
+			background-color: #f1f1f1;
+		}
+		&:last-child {
+			border: 0;
+		}
+	}
+
+	&-text {
+		width: calc(100% - 15%);
+		display: block;
+		float: left;
+
+		@media screen and (max-width: $break_sm) {
+			width: calc(100% - 25%);
+		}
+
+		@media screen and (max-width: $break_xs) {
+			width: 100%;
+			float: none;
+		}
+	}
+
+	&-price {
+		display: block;
+		width: 15%;
+		float: right;
+		text-align: right;
+
+		@media screen and (max-width: $break_sm) {
+			width: 25%;
+		}
+
+		@media screen and (max-width: $break_xs) {
+			width: 100%;
+			float: none;
+			text-align: left;
+			color: $color-akcent;
+		}
+	}
+
+	&-title {
+		@include pix-to-rem(20px);
+		font-weight: 600;
+
+		@media screen and (max-width: $break_xs) {
+			margin-bottom: 10px;
+		}
+	}
+
+	&-decr {
+		@media screen and (max-width: $break_xs) {
+			margin-bottom: 10px;
+		}
+	}
+}

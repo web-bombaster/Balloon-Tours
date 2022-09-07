@@ -1,0 +1,69 @@
+.advantages {
+    padding-top: 215px;
+    padding-bottom: 215px;
+
+    background-image: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url('./../img/bg-advantages.jpg');
+    background-position: center;
+    background-size: cover;
+
+    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
+
+    @media (max-width: $break_md) {
+        clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+    }
+
+    @media (max-width: $break_xs) {
+        clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+    }
+}
+
+.advantages__box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6rem;
+
+    @media (max-width: $break_xl) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+
+    @media (max-width: $break_xs) {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 3rem;
+    }
+}
+
+.advantages__item {
+    padding: 25px 20px;
+
+    text-align: center;
+    background-color: rgba(#fff, $alpha: .8);
+
+    transition: 0.25s;
+
+    &:hover {
+        transform: translateY(-1.5rem) scale(1.03);
+    }
+}
+
+.advantages-item__icon {
+    display: inline-block;
+    margin-bottom: 2.4rem;
+
+    font-size: 6.5rem;
+
+    background: linear-gradient(90deg, #C3956A 3.65%, #A24F03 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.advantages-item__title {
+    margin-bottom: 1rem;
+
+}
+
+.advantages-item__descr {
+
+}

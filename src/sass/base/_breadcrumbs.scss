@@ -1,0 +1,21 @@
+.breadcrumbs {
+	margin-top: 20px;
+	margin-bottom: -10px;
+	padding: 10px 15px;
+
+	@include pix-to-rem(14px);
+	line-height: 1.5;
+	// @include wrapper;
+	background-color: $color-akcent3;
+	border-radius: 8px;
+
+	@media screen and (max-width: $break_md) {
+		margin-bottom: -20px;
+		// padding: 15px;
+	}
+
+	.wrapper {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}

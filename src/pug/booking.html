@@ -1,0 +1,29 @@
+
+<section class="section booking" id="booking">
+  <div class="section__wrapper booking__wrapper">
+    <div class="booking__box">
+      <h2 class="section__title booking__title">Забронировать тур</h2>
+      <form class="booking__form" action="#" method="post">
+        <div class="booking__group">
+          <input class="booking__input" type="text" id="name" name="name" placeholder="Имя Фамилия" required="required"/>
+          <label class="booking__label" for="name">Ваше Имя и Фамилия</label>
+        </div>
+        <div class="booking__group">
+          <input class="booking__input" type="email" id="email" name="email" placeholder="Ваш email" required="required"/>
+          <label class="booking__label" for="name">Ваш email</label>
+        </div>
+        <div class="booking__group group-radio">
+          <div class="booking__group-radio">
+            <input class="booking__input-radio" type="radio" name="tour" id="tour-1"/>
+            <label class="booking__label" for="tour-1">Групповой тур</label>
+          </div>
+          <div class="booking__group-radio">
+            <input class="booking__input-radio" type="radio" name="tour" id="tour-2"/>
+            <label class="booking__label" for="tour-2">Индивидуальный тур</label>
+          </div>
+        </div>
+        <button class="booking__btn btn btn--dark" type="submit">Забронировать</button>
+      </form>
+    </div>
+  </div>
+</section>

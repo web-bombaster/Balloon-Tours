@@ -1,0 +1,90 @@
+@use "sass:math";
+
+.btn {
+	position: relative;
+	display: inline-block;
+	margin-top: 5rem;
+	padding: 1.5rem 4rem;
+
+	font-style: normal;
+	font-weight: 400;
+	font-size: 2rem;
+	line-height: 2.4rem;
+	letter-spacing: .5rem;
+	color: #777777;
+	text-transform: uppercase;
+	text-decoration: none;
+
+	cursor: pointer;
+	border-radius: $border-radius;
+	transition: .5s background-color;
+	border: none;
+	background-color: #fff;
+
+	transition: transform .3s;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: $border-radius;
+		background-color: #fff;
+		z-index: -1;
+		transition: .3s all;
+		opacity: 1;
+	}
+
+	&:hover {
+		transform: translateY(-0.4rem);
+		box-shadow: (0 .4rem .4rem rgba(0, 0, 0, 0.1));
+
+		&::after {
+			transform: scale(1.5, 1.5);
+			opacity: 0;
+		}
+	}
+
+	&:active {
+		transform: translateY(-0.2rem);
+	}
+
+}
+
+.btn--secondary {
+	margin-top: 3rem;
+	padding: 1.4rem 1.8rem 1.4rem 1.8rem;
+
+	font-weight: 700;
+	font-size: 1.6rem;
+	line-height: 1.9rem;
+	letter-spacing: .2rem;
+	text-transform: none;
+
+	color: $color-text-default;
+
+	border-bottom: .1rem solid #BA8554;
+	background-color: transparent;
+	border-radius: 0;
+
+	&:hover {
+		box-shadow: none;
+		background-color: #BA8554;
+		color: #fff;
+	}
+
+	&::after {
+		display: none;
+	}
+}
+
+.btn--dark {
+    background-color: #BA8554;
+    color: #fff;
+
+    &::after {
+        background-color: #BA8554;
+    }
+}

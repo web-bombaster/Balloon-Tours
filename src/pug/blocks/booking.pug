@@ -1,0 +1,26 @@
+section.section.booking#booking
+	.section__wrapper.booking__wrapper
+		.booking__box
+			h2.section__title.booking__title Забронировать тур
+
+			form(action="#", method="post").booking__form
+
+				.booking__group
+					input(type="text", id="name", name="name", placeholder="Имя Фамилия", required).booking__input
+					label(for="name").booking__label Ваше Имя и Фамилия
+
+				.booking__group
+					input(type="email", id="email", name="email", placeholder="Ваш email", required).booking__input
+					label(for="name").booking__label Ваш email
+
+				.booking__group.group-radio
+					.booking__group-radio
+						input(type="radio", name="tour", id="tour-1").booking__input-radio
+						label(for="tour-1").booking__label Групповой тур
+
+					.booking__group-radio
+						input(type="radio", name="tour", id="tour-2").booking__input-radio
+						label(for="tour-2").booking__label Индивидуальный тур
+
+
+				button(type="submit").booking__btn.btn.btn--dark Забронировать

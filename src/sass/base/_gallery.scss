@@ -1,0 +1,113 @@
+@use "sass:math";
+
+.gallery {
+	padding: 0;
+	margin: 0 -15px;
+	// margin-left: -5px;
+	// margin-right: -5px;
+	overflow: hidden;
+	// @include row-flex();
+	// font-size: 0;
+
+	@media (max-width: $break_sm) {
+		margin: 0 -8px;
+	}
+
+	p {
+		display: none;
+	}
+
+	img {
+		display: block;
+	}
+
+	&-item {
+		list-style-type: none;
+		margin: 0 !important;
+		padding: 12px 15px;
+
+		font-size: math.div(0px, $font-size-default) * 1rem;
+		line-height: 0;
+		// float: left;
+		// width: 20%;
+		// box-sizing: border-box;
+		// @include col();
+		// @include size(3);
+		// @include size-sm(6);
+		// @include size-xs(12);
+
+		@media (max-width: $break_sm) {
+			padding: 4px 8px;
+		}
+
+		@media screen and (max-width: $break_xs) {
+			margin-top: 7px;
+			margin-bottom: 8px;
+		}
+
+		&::before {
+			content: '';
+			display: none;
+		}
+
+		&__title {
+			text-align: center;
+		}
+
+		a {
+			text-decoration: none;
+			font-size: 14px;
+		}
+	}
+
+	.imggallery {
+		display: block;
+		box-shadow: 0px 0px 1px 0px #000;
+		padding: 0;
+		width: 100%;
+		box-sizing: border-box;
+	}
+}
+
+img.mfp-img {
+	max-height: none !important;
+}
+
+
+.my-botton-slider {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 50px;
+	margin: 25px 0;
+	//overflow: hidden;
+	clear: both;
+	//padding-bottom: 35px;
+
+	.btn-prev,
+	.btn-next {
+		width: 50px;
+		height: 50px;
+		display: block;
+		cursor: pointer;
+		background-color: $color-akcent;
+		border-radius: 8px;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 30px 30px;
+	}
+
+	.btn-prev {
+		position: absolute;
+		left: 50%;
+		margin-left: -55px;
+		background-image: url('./../img//icons/arrow-left.svg');
+	}
+
+	.btn-next {
+		position: absolute;
+		left: 50%;
+		margin-left: 5px;
+		background-image: url('./../img//icons/arrow-right.svg');
+	}
+}

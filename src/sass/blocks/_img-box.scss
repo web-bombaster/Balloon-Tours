@@ -1,0 +1,43 @@
+.img-box {
+    position: relative;
+    // height: 100%;
+    padding-top: 67.6%; // Padding-Top Hack
+
+    &:hover .img-box__item:not(:hover) {
+        transform: scale(.9);
+    }
+}
+
+.img-box__item {
+    position: absolute;
+
+    width: 60%;
+    height: auto;
+    border-radius: .5rem;
+    overflow: hidden;
+
+    transition: .25s;
+    z-index: 10;
+
+    &:hover {
+        box-shadow: $shadow;
+        transform: scale(1.1);
+        z-index: 20;
+    }
+
+}
+
+.img-box__item--01 {
+    top: 0;
+    left: 0;
+}
+
+.img-box__item--02 {
+    top: 16%;
+    right: 0;
+}
+
+.img-box__item--03 {
+    left: 4%;
+    top: 30%;
+}

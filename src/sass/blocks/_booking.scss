@@ -1,0 +1,209 @@
+
+.booking {
+    padding: 10rem;
+    background: linear-gradient(90deg, #C3956A 3.65%, #A24F03 100%);
+
+    @media (max-width: $break_sm) {
+        padding: 5rem;
+    }
+
+    @media (max-width: $break_xs) {
+        padding: 2rem 0;
+    }
+}
+
+.booking__wrapper {
+
+}
+
+.booking__box {
+    padding: 5rem;
+    background-color: #fff;
+    background: linear-gradient(110deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 57%, rgba(186, 133, 80, 0) 57%, rgba(161, 79, 3, 0) 100%), url('./../img/bg-form.jpg');
+
+    background-size: cover;
+    background-position: center center;
+
+    box-shadow: $shadow;
+    border-radius: .3rem;
+
+    @media (max-width: $break_xl) {
+        background: linear-gradient(110deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 67%, rgba(186, 133, 80, 0) 77%, rgba(161, 79, 3, 0) 100%), no-repeat center/cover url('./../img/bg-form.jpg');
+
+        text-align: center;
+    }
+
+    @media (max-width: $break_sm) {
+        background: linear-gradient(110deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 77%, rgba(186, 133, 80, 0) 97%, rgba(161, 79, 3, 0) 100%), no-repeat center/cover url('./../img/bg-form.jpg');
+    }
+
+    @media (max-width: $break_xs) {
+        padding: 3rem;
+    }
+}
+
+.booking__title {
+    text-align: left;
+    margin-bottom: 3rem;
+
+    @media (max-width: $break_sm) {
+        text-align: center;
+    }
+
+    @media (max-width: $break_xs) {
+        letter-spacing: .4rem;
+        font-size: 2.6rem;
+    }
+}
+
+.booking__form {
+    max-width: 45rem;
+
+    @media (max-width: $break_sm) {
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media (max-width: $break_xs) {
+        max-width: 100%;
+    }
+}
+
+.booking__group {
+    position: relative;
+    margin-bottom: 5rem;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.booking__input {
+    display: block;
+    padding: 1.8rem 2.2rem 1.6rem 2.2rem;
+    width: 100%;
+    max-width: 35.5rem;
+    background: #fff;
+
+    box-shadow: $shadow;
+    border-radius: $border-radius;
+    border: none;
+    border-bottom: .2rem solid transparent;
+
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    letter-spacing: .2rem;
+    color: $color-text-default;
+
+    @media (max-width: $break_sm) {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &:focus {
+        border-bottom: .2rem solid #66D763;
+        outline: none;
+    }
+
+    &:focus:invalid {
+        border-bottom: .2rem solid #D76363;
+    }
+
+    &:placeholder-shown + .booking__label {
+        opacity: 0;
+        visibility: hidden;
+
+        padding-top: 3rem;
+
+        @media (max-width: $break_sm) {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+.group-radio {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $break_sm) {
+        // flex-direction: column;
+        // margin-bottom: 1.5rem;
+        display: block;
+    }
+}
+
+.booking__group-radio {
+
+}
+
+.booking__input-radio {
+    position: relative;
+    display: none;
+
+    & + .booking__label {
+        position: relative;
+        left: 0;
+        cursor: pointer;
+        text-align: left;
+    }
+
+    & + .booking__label::before {
+        position: absolute;
+        content: '';
+        top: -0.5rem;
+        left: 0;
+
+        height: 3rem;
+        width: 3rem;
+        border-radius: 50%;
+
+        border: .4rem solid #BA8554;
+        opacity: 1;
+    }
+
+    &:checked + .booking__label::after {
+        position: absolute;
+        content: '';
+        top: .3rem;
+        left: .8rem;
+
+        height: 1.4rem;
+        width: 1.4rem;
+        border-radius: 50%;
+        background-color: #BA8554;
+
+        opacity: 1;
+    }
+}
+
+.booking__label {
+    position: absolute;
+    display: block;
+    padding-top: 1rem;
+
+    transition: .25s;
+
+
+    .booking__input + & {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+    }
+
+    .booking__group-radio & {
+        padding: 0 0 0 3.7rem;
+
+        @media (max-width: $break_sm) {
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+
+.booking__btn {
+    margin-top: 5rem;
+}
+

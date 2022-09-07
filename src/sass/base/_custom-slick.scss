@@ -1,0 +1,62 @@
+.slick-slide img {
+	width: 100%;
+}
+
+.slick-prev,
+.slick-next {
+	width: 50px;
+	height: 50px;
+	z-index: 1;
+
+	border-radius: $rorder-radius;
+	border: 2px solid rgba(255, 255, 255, 0.1);
+
+	background-size: 30px 30px;
+	background-position: center center;
+	background-repeat: no-repeat;
+
+	transition: .5s;
+
+
+	&:before {
+		color: #fff;
+		content: "";
+		line-height: 50px;
+		@include pix-to-rem(26px);
+	}
+
+}
+
+.slick-prev {
+	left: 25px;
+	background-image: url('./../img/icons/arrow-left.svg');
+
+	&:hover {
+		background-color: $color-akcent;
+	}
+}
+
+.slick-next {
+	right: 25px;
+	background-image: url('./../img/icons/arrow-right.svg');
+}
+
+.slick-next:focus,
+.slick-next:hover {
+	background: url("./../img/icons/arrow-right.svg") no-repeat;
+}
+
+.slick-prev:focus,
+.slick-prev:hover {
+	background: url("./../img/icons/arrow-left.svg") no-repeat;
+}
+
+.slick-next:focus,
+.slick-next:hover,
+.slick-prev:focus,
+.slick-prev:hover {
+	background-size: 30px 30px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-color: $color-akcent;
+}

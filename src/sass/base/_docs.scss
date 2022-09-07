@@ -1,0 +1,205 @@
+/* pdf */
+a:not([class])[href$=".pdf"] {
+	position: relative;
+	box-sizing: border-box;
+	padding-left: 35px;
+
+	&::before {
+		content: '';
+		width: 25px;
+		height: 25px;
+		background-size: cover;
+		background-position: center left;
+		background-image: url('./../img/icons/docs/pdf.svg');
+		position: absolute;
+		left: 0;
+	}
+}
+
+/* документ MS*/
+a:not([class])[href$=".doc"],
+a:not([class])[href$=".docx"] {
+	position: relative;
+	box-sizing: border-box;
+	padding-left: 35px;
+
+	&::before {
+		content: '';
+		width: 25px;
+		height: 25px;
+		background-size: cover;
+		background-position: center left;
+		background-image: url('./../img/icons/docs/doc.svg');
+		position: absolute;
+		left: 0;
+	}
+}
+
+/* таблица MS*/
+a:not([class])[href$=".csv"],
+a:not([class])[href$=".xls"],
+a:not([class])[href$=".xlsx"] {
+	position: relative;
+	box-sizing: border-box;
+	padding-left: 35px;
+
+	&::before {
+		content: '';
+		width: 25px;
+		height: 25px;
+		background-size: cover;
+		background-position: center left;
+		background-image: url('./../img/icons/docs/excel.svg');
+		position: absolute;
+		left: 0;
+	}
+}
+
+/* презентация MS*/
+a:not([class])[href$=".ppt"],
+a:not([class])[href$=".pptx"],
+a:not([class])[href$=".odp"],
+a:not([class])[href$=".dps"] {
+	position: relative;
+	box-sizing: border-box;
+	padding-left: 35px;
+
+	&::before {
+		content: '';
+		width: 25px;
+		height: 25px;
+		background-size: cover;
+		background-position: center left;
+		background-image: url('./../img/icons/docs/ppt.svg');
+		position: absolute;
+		left: 0;
+	}
+}
+
+/* документа в формате бесплатных офисных программ .odt, .wps*/
+a:not([class])[href$=".wps"],
+a:not([class])[href$=".odt"] {
+	position: relative;
+	box-sizing: border-box;
+	padding-left: 35px;
+
+	&::before {
+		content: '';
+		width: 25px;
+		height: 25px;
+		background-size: cover;
+		background-position: center left;
+		background-image: url('./../img/icons/docs/document.svg');
+		position: absolute;
+		left: 0;
+	}
+}
+
+/* таблицы в формате бесплатных офисных программ .ods, .et*/
+a:not([class])[href$=".et"],
+a:not([class])[href$=".ods"] {
+	position: relative;
+	box-sizing: border-box;
+	padding-left: 35px;
+
+	&::before {
+		content: '';
+		width: 25px;
+		height: 25px;
+		background-size: cover;
+		background-position: center left;
+		background-image: url('./../img/icons/docs/table.svg');
+		position: absolute;
+		left: 0;
+	}
+}
+
+/* архивы */
+a:not([class])[href$=".7z"],
+a:not([class])[href$=".zip"],
+a:not([class])[href$=".gzip"],
+a:not([class])[href$=".zip"],
+a:not([class])[href$=".gz"],
+a:not([class])[href$=".rar"],
+a:not([class])[href$=".sh"],
+a:not([class])[href$=".tar"],
+a:not([class])[href$=".tar-gz"],
+a:not([class])[href$=".tgz"],
+a:not([class])[href$=".zipx"],
+a:not([class])[href$=".ace"] {
+	position: relative;
+	box-sizing: border-box;
+	padding-left: 35px;
+
+	&::before {
+		content: '';
+		width: 25px;
+		height: 25px;
+		background-size: cover;
+		background-position: center left;
+		background-image: url('./../img/icons/docs/compress.svg');
+		position: absolute;
+		left: 0;
+	}
+}
+
+/* текстовые файлы */
+a:not([class])[href$=".txt"] {
+	position: relative;
+	box-sizing: border-box;
+	padding-left: 35px;
+
+	&::before {
+		content: '';
+		width: 25px;
+		height: 25px;
+		background-size: cover;
+		background-position: center left;
+		background-image: url('./../img/icons/docs/txt.svg');
+		position: absolute;
+		left: 0;
+	}
+}
+
+/* картинки */
+a:not([class])[href$=".webp"],
+a:not([class])[href$=".jpg"],
+a:not([class])[href$=".jpeg"],
+a:not([class])[href$=".jpe"],
+a:not([class])[href$=".jfif"],
+a:not([class])[href$=".png"],
+a:not([class])[href$=".gif"],
+a:not([class])[href$=".eps"],
+a:not([class])[href$=".ico"],
+a:not([class])[href$=".cdr"],
+a:not([class])[href$=".psd"],
+a:not([class])[href$=".ai"],
+a:not([class])[href$=".raw"],
+a:not([class])[href$=".svg"],
+a:not([class])[href$=".jxr"],
+a:not([class])[href$=".hdp"],
+a:not([class])[href$=".wdp"],
+a:not([class])[href$=".jp2"],
+a:not([class])[href$=".j2k"],
+a:not([class])[href$=".jpf"],
+a:not([class])[href$=".jpm"],
+a:not([class])[href$=".jpg2"],
+a:not([class])[href$=".j2c"],
+a:not([class])[href$=".bmp"],
+a:not([class])[href$=".tif"],
+a:not([class])[href$=".tiff"] {
+	position: relative;
+	box-sizing: border-box;
+	padding-left: 35px;
+
+	&::before {
+		content: '';
+		width: 25px;
+		height: 25px;
+		background-size: cover;
+		background-position: center left;
+		background-image: url('./../img/icons/docs/img.svg');
+		position: absolute;
+		left: 0;
+	}
+}

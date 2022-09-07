@@ -1,0 +1,57 @@
+// @use "sass:math";
+
+// Миксины
+@import "./mixins/mixins";
+
+// Переменные
+@import "./base/vars";
+
+// Шрифты
+@import "./base/fonts";
+@import "./base/icomoonFont";
+
+// Нормализация
+@import './base/normalize';
+
+// Стандартности
+@import './base/utilities'; // Утилиты, вспомогательные классы
+@import './base/animation'; // Анимации
+// @import '_preloader'; // Прелоадер
+// @import "_menu-adaptiv";
+// @import "_help-panel";
+// @import '_adaptiv-video'; // Адаптивное видео
+// @import '_form'; // Формы
+// @import "_gallery";
+// @import '_pagination'; // Постраничная навигация
+// @import '_breadcrumbs'; // Постраничная навигация
+// @import "_ukrasheniya"; // Украшения текста - списки, цитаты и пр.
+// @import "_docs";
+// @import "_post";
+// @import "_imgPost";
+// @import "_adaptiv-tables";
+// @import "_characteristic";
+@import './base/_button'; // Кнопки
+
+// Свои общие стили
+@import "./base/main";
+
+// Блоки сайта
+@import "./blocks/menu";
+@import "./blocks/header";
+@import "./blocks/about";
+@import "./blocks/img-box";
+@import "./blocks/advantages";
+@import "./blocks/tours";
+@import "./blocks/reviews";
+@import "./blocks/bg-video";
+@import "./blocks/booking";
+@import "./blocks/footer";
+
+// Библиотеки и их кастомизация
+// @import '_libs'; // Импортируем стили подключенных библиотек
+// @import "../libs/magnific-popup/dist/magnific-popup.css";
+// @import '_custom-popup'; // Кастомизация стилей попапов
+// @import "../libs/slick-carousel/slick/slick.scss"; // slick
+// @import "../libs/slick-carousel/slick/slick-theme.scss"; // slick
+// @import '_custom-slick'; // Кастомизация стилей слайдера
+// @import "../libs/font-awesome-4.7.0/css/font-awesome.css";

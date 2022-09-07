@@ -1,0 +1,253 @@
+.form {
+	background-color: #fff;
+	//background-image: url('./../img/bg-form.jpg');
+	background-size: cover;
+	background-position: center center;
+	padding: 30px;
+	// color: #fff;
+	font-size: 18px;
+	line-height: 1.25;
+	border-radius: 8px;
+
+	@media screen and (max-width: $break_xs) {
+		padding: 20px;
+	}
+
+	h3 {
+		margin-top: 0;
+		margin-bottom: 25px;
+		@include pix-to-rem(32px);
+		// text-transform: uppercase;
+		font-weight: bold;
+		line-height: 1.1;
+		background-color: transparent;
+		// color: #ffffff;
+		border: none;
+		padding-bottom: 0;
+
+		span {
+			display: block;
+			text-transform: none;
+			@include pix-to-rem(22px);
+		}
+	}
+
+	p {
+		text-align: center;
+	}
+
+	a {
+		// color: #fff;
+	}
+
+	label {
+		display: block;
+		margin-bottom: 10px;
+	}
+
+	input {
+		position: relative;
+		display: block;
+		width: 100%;
+		max-width: 100%;
+		margin: 0px auto;
+		color: $color-default;
+		border: 1px solid $color-akcent;
+		background-color: $color-akcent3;
+		border-radius: 4px;
+		padding: 14px 14px 14px 58px;
+		box-sizing: border-box;
+		outline: none;
+		font-size: 16px;
+		font-weight: normal;
+		overflow: hidden;
+
+		&::placeholder {
+			color: lighten($color-default, 30%);
+		}
+
+		&.hidden {
+			display: none;
+		}
+
+		&[type=checkbox] {
+			display: inline-block;
+			width: auto;
+			margin-right: 10px;
+			margin-bottom: auto;
+		}
+
+		&.error {
+			margin-top: 5px;
+
+			&::after {
+				display: none;
+			}
+		}
+
+		&.error[type=checkbox] {
+			box-shadow: 0px 0px 0px 2px lighten($color-error, 15%);
+		}
+	}
+
+	textarea {
+		display: block;
+		max-width: 100%;
+		width: 100%;
+		height: 100px;
+		resize: none;
+		background-color: $color-akcent3;
+		border: 1px solid $color-akcent;
+		border-radius: 4px;
+		box-sizing: border-box;
+		padding: 14px 14px 14px 58px;
+		outline: none;
+		color: $color-default;
+		font-size: 16px;
+		font-weight: normal;
+		overflow: hidden;
+
+		&::placeholder {
+			color: lighten($color-default, 30%);
+		}
+	}
+
+	.before {
+		position: relative;
+		margin-bottom: 15px;
+		border-radius: 4px;
+		// overflow: hidden;
+
+		&:before {
+			position: absolute;
+			content: '';
+			// border-radius: 4px 0px 0px 4px;
+			left: 1px;
+			top: 1px;
+			width: 46px;
+			height: 46px;
+			background-size: 20px 20px;
+			background-position: center center;
+			background-repeat: no-repeat;
+			z-index: 10;
+			// background-color: darken($color-akcent3, 7%);
+			background-color: $color-akcent;
+		}
+
+		&.name:before {
+			background-image: url('./../img/icons/user.svg');
+		}
+
+		&.phone:before {
+			background-image: url('./../img/icons/phone-white.svg');
+		}
+
+		&.mail:before {
+			background-image: url('./../img/icons/mail-white.svg');
+		}
+
+		&.comment:before {
+			background-image: url('./../img/icons/comments.svg');
+		}
+	}
+
+	.error {
+		color: lighten($color-error, 15%);
+		position: relative;
+		margin-top: 30px;
+		// background-color: lighten($color-error, 40%);
+
+		&::before {
+			background-color: $color-error;
+		}
+
+		input {
+			background-color: $color-war;
+
+			&::placeholder {
+				color: $color-akcent3;
+			}
+		}
+
+		textarea {
+			background-color: $color-war;
+
+			&::placeholder {
+				color: $color-akcent3;
+			}
+		}
+
+		&::after {
+			position: absolute;
+			content: 'Поле содержит ошибку!';
+			top: -20px;
+			left: 1px;
+			// right: 0;
+			@include pix-to-rem(14px);
+			color: #fff;
+			background-color: $color-error;
+			border-radius: 2px;
+		}
+	}
+
+	.btn {
+		display: block;
+		//background-color: $color-akcent;
+		//color: #fff;
+		transition: .5s;
+		margin: 0 auto;
+		padding: 15px 30px;
+		outline: none;
+		// border-radius: 4px;
+		border: 0px solid $color-akcent2;
+		box-shadow: $color-akcent5 0px 0px 0px 0px;
+
+		&:hover {
+			//background-color: darken($color-akcent, 5%);
+			box-shadow: $color-akcent5 0px 0px 10px 0px;
+		}
+	}
+
+	.polytic {
+		display: block;
+		margin-bottom: 25px;
+		font-size: 12px;
+
+		&.error {
+			color: $color-error;
+
+			a {
+				color: $color-error;
+			}
+		}
+	}
+}
+
+.top-form-text {
+	margin-bottom: 25px;
+}
+
+.mfp {
+	&-content {
+		.form {
+			max-width: 400px;
+			margin: auto;
+			position: relative;
+
+			input {
+				width: 100%;
+
+				&[type=checkbox] {
+					display: inline-block;
+					width: auto;
+					margin-right: 10px;
+					margin-bottom: auto;
+				}
+			}
+		}
+	}
+
+	&-close {
+		color: #000;
+	}
+}

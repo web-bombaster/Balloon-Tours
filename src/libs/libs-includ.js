@@ -1,0 +1,7 @@
+// -include './../libs/jquery.magnific-popup.js'
+// -include 'jquery.malihu.PageScroll2id.js'
+// -include './../libs/jquery.malihu.PageScroll2id.js'
+// -include './../libs/jquery.spincrement.min.js'
+// -include './../libs/jquery.sticky.js'
+// -include './../libs/slick.js'
+// include './../js/common.min.js'

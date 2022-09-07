@@ -1,0 +1,13 @@
+.about {
+
+}
+
+.about__box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6rem;
+
+    @media (max-width: $break_sm) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

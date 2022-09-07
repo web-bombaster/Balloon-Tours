@@ -1,0 +1,100 @@
+.scroll-wrapper {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 40px;
+    overflow-x: auto;
+
+    &::before {
+        position: absolute;
+        top: 0px;
+        left: 0;
+        display: block;
+        content: 'Прокручивайте таблицу для полного просмотра';
+        font-size: 12px;
+        color: $color-akcent;
+        font-style: italic;
+        line-height: 1;
+    }
+}
+
+.scroll-inner {
+    width: 100%;
+    height: 20px;
+}
+
+.adaptive-table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    // display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 15px 0;
+    @include pix-to-rem(18px);
+    line-height: 1.25;
+    border-collapse: collapse;
+
+    @media screen and (max-width: $break_sm) {
+        @include pix-to-rem(14px);
+        //overflow-x: auto;
+        //display: block;
+    }
+}
+
+th,
+td {
+    padding: 8px 5px;
+    vertical-align: top;
+    //border: 1px solid darken($color-akcent4, 3%);
+}
+
+th:not(:first-child),
+td:not(:first-child) {
+    text-align: center;
+}
+
+thead th {
+    vertical-align: top;
+    // border-bottom: (2 * $table-border-width) solid $table-border-color;
+}
+
+thead {
+    transition: .5s;
+    // background-color: darken($color-akcent4, 3%);
+    background-color: $color-akcent;
+    color: #fff;
+
+    th {
+        vertical-align: middle;
+    }
+}
+
+tr {
+    transition: all .5s;
+    border-bottom: 1px solid darken($color-akcent3, 15%);
+
+    &:first-child {
+        text-align: center;
+        font-weight: bold;
+    }
+
+    td {
+        vertical-align: middle;
+    }
+
+    &:nth-child(odd) {
+        background-color: $color-akcent3;
+    }
+
+    &:first-child {
+        background-color: $color-akcent;
+        color: #fff;
+    }
+
+    &:hover {
+        background-color: lighten($color-akcent, 55%);
+        //color: #fff;
+    }
+}

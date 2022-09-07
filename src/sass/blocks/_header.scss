@@ -1,0 +1,137 @@
+.header {
+    // position: relative;
+    padding-top: 5rem;
+    height: 85vh;
+    min-height: 70rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    // align-items: center;
+    // justify-content: center;
+
+    color: #fff;
+
+    background-image: linear-gradient(90deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url('./../img/bg-header.jpg');
+    background-position: center;
+    background-size: cover;
+
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+
+    @media (max-width: $break_md) {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+    }
+}
+
+.header__top {
+    // position: absolute;
+    // top: 5rem;
+    // left: 50%;
+    // transform: translateX(-50%);
+    width: 100%;
+    max-width: 124rem;
+    margin-bottom: 12rem;
+
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+
+    @media (max-width: $break_sm) {
+        margin-bottom: 6rem;
+    }
+}
+
+.header__logo {
+    height: 7rem;
+    width: auto;
+}
+
+// .header__btn {
+//     background-color: transparent;
+//     border: none;
+//     padding: 0;
+//     border: 1px solid rgb(252, 13, 13);
+
+//     position: fixed;
+//     z-index: 10;
+//     right: 0;
+
+//     font-size: 0;
+//     line-height: 0;
+
+//     img {
+//         display: block;
+//         height: 7rem;
+//         width: auto;
+//     }
+// }
+
+.header__text {
+    // margin-top: -5%;
+    text-align: center;
+}
+
+.text-header {
+    max-width: 80%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+
+    @media (max-width: $break_sm) {
+        max-width: 90%;
+    }
+
+    @media (max-width: $break_xs) {
+        max-width: 100%;
+    }
+}
+
+.text-header__title {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 5rem;
+    line-height: 1.2;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+
+    animation: leftToRight .6s ease-in-out;
+    animation-delay: 1s;
+    backface-visibility: hidden;
+
+    @media (max-width: $break_xs) {
+        font-size: 4rem;
+    }
+}
+
+.text-header__descr {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 4rem;
+    line-height: 1.2;
+    letter-spacing: .5rem;
+
+    animation: rightToLeft .6s ease-in-out;
+    animation-delay: 1s;
+    backface-visibility: hidden;
+
+    @media (max-width: $break_sm) {
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+}
+
+.text-header__btn {
+    animation: topToBottom .5s ease 1.2s;
+    animation-fill-mode: backwards;
+}

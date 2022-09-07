@@ -1,0 +1,21 @@
+- var pageType = 'content-home';
+//- Для pageType указать тип страницы. Варианты:
+	content-home - главная страница
+
+doctype html
+html(lang="ru-RU")
+	include ../includes/head
+	body
+		include ../blocks/menu
+		.container
+			button.menu__btn(type="button", aria-label="Меню сайта")
+				span
+			if pageType === 'content-home'
+				include ../blocks/header
+				main
+					include ../blocks/about
+					include ../blocks/advantages
+					include ../blocks/tours
+					include ../blocks/reviews
+					include ../blocks/booking
+				include ../blocks/footer

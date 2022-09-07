@@ -1,0 +1,100 @@
+// :not(nav) ul:not([class]) li:before
+//*:not(nav) {
+ul:not([class]) {
+	padding-left: 25px;
+	// border-top: 1px solid #000;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	//border-top: 1px solid $color-akcent3;
+	//border-bottom: 1px solid $color-akcent3;
+	overflow: hidden;
+
+	li {
+		margin: 15px 0;
+		list-style-type: none;
+
+		&:before {
+			position: absolute;
+			margin-top: 2px;
+			margin-left: -25px;
+			background: $color-akcent;
+			color: #fff;
+			height: 18px;
+			width: 18px;
+			line-height: 36px;
+			text-align: center;
+			font-weight: 700;
+			border-radius: 50%;
+			font-size: 18px;
+			content: "";
+			background-image: url('./../img/icons/arrow-right.svg');
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: 12px 12px;
+		}
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+//}
+
+ol:not([class]) {
+	counter-reset: li;
+	padding-left: 25px;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	// border-top: 1px solid $color-akcent3;
+	// border-bottom: 1px solid $color-akcent3;
+	overflow: hidden;
+	// background-color: $color-akcent3;
+
+	li {
+		margin: 15px 0;
+		list-style-type: none;
+
+		&:before {
+			content: counter(li);
+			counter-increment: li;
+			position: absolute;
+			margin-top: 2px;
+			margin-left: -25px;
+			background: $color-akcent;
+			color: #fff;
+			height: 18px;
+			width: 18px;
+			line-height: 19px;
+			text-align: center;
+			font-weight: 300;
+			border-radius: 50%;
+			font-size: 14px;
+		}
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.quote,
+blockquote {
+	background-color: lighten($color-akcent, 79%);
+	box-sizing: border-box;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, .25);
+	padding: 15px;
+	border-radius: 8px;
+	font-style: italic;
+	letter-spacing: 1px;
+	// @include pix-to-rem(18px);
+	line-height: 1.25;
+	border-left: 5px solid $color-akcent;
+}
