@@ -1,3 +1,4 @@
+let body = document.querySelector('body');
 let menu = document.querySelector('.menu');
 let menuItemLink = document.querySelectorAll('.menu__list-link');
 let menuBtn = document.querySelector('.menu__btn');
@@ -6,14 +7,19 @@ let menuBtn = document.querySelector('.menu__btn');
 function menuToggle() {
 	menu.classList.toggle('toggle');
 	menuBtn.classList.toggle('toggle');
+	body.classList.toggle('toggle');
 }
 
 // Показать / скрыть меню по клику на кнопку
 menuBtn.addEventListener("click", menuToggle);
 
-// Показать / скрыть меню по клику на пункт меню
+// По клику на пункт меню проверяем, есть ли у меню класс toggle. Если да, удаляем для body, menu и menuBtn класс toggle
 menuItemLink.forEach(element => {
-	element.addEventListener("click", menuToggle);
+	element.addEventListener("click", function () {
+		if (menu.classList.contains('toggle')) {
+			menuToggle();
+		}
+	});
 });
 
 // Плавная прокрутка до якоря

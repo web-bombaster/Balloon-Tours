@@ -1,9 +1,9 @@
 html {
 	font-size: 62.5%; // для html размер в пикселях, для body в ремах
 
-    @media (max-width: $break_md) {
-        font-size: 50%;
-    }
+	@media (max-width: $break_md) {
+		font-size: 50%;
+	}
 }
 
 body {
@@ -21,26 +21,32 @@ body {
 	min-height: -webkit-fill-available;
 	overflow-x: hidden;
 
-    font-family: $font-default;
-    font-size: 1.6rem;
-    font-weight: normal;
-    color: $color-text-default;	line-height: 1.4;
-    letter-spacing: .2rem;
+	font-family: $font-default;
+	font-size: 1.6rem;
+	font-weight: normal;
+	color: $color-text-default;
+	line-height: 1.4;
+	letter-spacing: .2rem;
 
 	/*Перенос длинных слов*/
 	overflow-wrap: break-word;
 	word-wrap: break-word;
 
-    background-color: #fff;
-    overflow-x: hidden;
+	background-color: #fff;
+	overflow-x: hidden;
 
-    @media (min-width: $break_xxl) {
-        padding: 5rem;
-    }
+	@media (min-width: $break_xxl) {
+		padding: 5rem;
+	}
 
-    @media (max-width: $break_md) {
-        font-size: 1.8rem;
-    }
+	@media (max-width: $break_md) {
+		font-size: 1.8rem;
+	}
+
+	&.toggle {
+		height: 100vh;
+		overflow-y: hidden;
+	}
 }
 
 *,
@@ -57,74 +63,75 @@ body {
 }
 
 .container {
-    position: relative;
+	position: relative;
 	width: 100%;
 	// max-width: 144rem;
 	margin-left: auto;
 	margin-right: auto;
-    background: #F7F7F7;
-    overflow-x: hidden;
+	background: #F7F7F7;
+	overflow-x: hidden;
 }
 
 .visually-hidden {
 	position: absolute !important;
-	clip: rect(.1rem .1rem .1rem .1rem); /* IE6, IE7 */
+	clip: rect(.1rem .1rem .1rem .1rem);
+	/* IE6, IE7 */
 	clip: rect(.1rem, .1rem, .1rem, .1rem);
-	padding:0 !important;
-	border:0 !important;
+	padding: 0 !important;
+	border: 0 !important;
 	height: .1rem !important;
 	width: .1rem !important;
 	overflow: hidden;
 }
 
 .section {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+	padding-top: 8rem;
+	padding-bottom: 8rem;
 }
 
 .section__title {
-    margin-top: 0;
-    margin-bottom: 8rem;
+	margin-top: 0;
+	margin-bottom: 8rem;
 
-    font-weight: 800;
-    font-size: 3.6rem;
-    line-height: 4.3rem;
-    letter-spacing: 1rem;
-    text-transform: uppercase;
-    text-align: center;
+	font-weight: 800;
+	font-size: 3.6rem;
+	line-height: 4.3rem;
+	letter-spacing: 1rem;
+	text-transform: uppercase;
+	text-align: center;
 
-    color: transparent;
-    background: linear-gradient(90deg, #C3956A 3.65%, #A24F03 100%);
-    background-clip: text;
-    text-shadow: (0 .4rem .4rem rgba(0, 0, 0, 0.25));
+	color: transparent;
+	background: linear-gradient(90deg, #C3956A 3.65%, #A24F03 100%);
+	background-clip: text;
+	text-shadow: (0 .4rem .4rem rgba(0, 0, 0, 0.25));
 
-    transition: .25s;
-    backface-visibility: hidden;
+	transition: .25s;
+	backface-visibility: hidden;
 
-    &:hover {
-        transform: skewY(2deg) skewX(10deg) scale(1.1);
-    }
+	&:hover {
+		transform: skewY(2deg) skewX(10deg) scale(1.1);
+	}
 }
 
 .section__wrapper {
-    max-width: 114rem;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+	max-width: 114rem;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
 }
 
 h3 {
-    margin-top: 0;
-    margin-bottom: 1rem;
+	margin-top: 0;
+	margin-bottom: 1rem;
 
-    font-weight: 700;
-    font-size: 2rem;
-    line-height: 2.4rem;
-    letter-spacing: .2rem;
-    text-transform: uppercase;
+	font-weight: 700;
+	font-size: 2rem;
+	line-height: 2.4rem;
+	letter-spacing: .2rem;
+	text-transform: uppercase;
 }
 
 img {
-    max-width: 100%;
+	max-width: 100%;
 }
