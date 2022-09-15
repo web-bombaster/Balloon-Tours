@@ -11,3 +11,5 @@ GitHub Pages: https://web-bombaster.github.io/Balloon-Tours/dist/
 - Использование иконочных шрифтов (в блоке с преимуществами)
 - Переворачивающиеся карточки с турами (`perspective`, `rotateY`, `backface-visibility`)
 - Форма с кастомными `input type="radio"` и очень простой валидацией
+
+Работу выполнил: [Мошатин Юрий](https://vk.com/moshatin)
